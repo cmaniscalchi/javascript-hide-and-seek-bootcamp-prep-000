@@ -4,13 +4,6 @@ function getFirstSelector(selector) {
 }
 
 function nestedTarget() {
-  document.getElementById('nested')
+  return document.getElementById('nested .target');
   
 }
-
-
-describe('nestedTarget()', () => {
-    it('pulls a .target out of #nested', () => {
-      expect(nestedTarget()).toEqual(document.querySelector('#nested .target'))
-    })
-  })
