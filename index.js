@@ -1,8 +1,20 @@
 function getFirstSelector(selector) {
+  return document.querySelector(selector); 
+}
 
-var rankedList = document.getElementsByClassName('ranked-list').document.querySelector('ranked-list');
+function nestedTarget() {
+  return document.querySelector('#nested .target');
+}
 
-var divs = document.getElementById('nested');
-  
-  return rankedList, divs; 
+function deepestChild() {
+  return document.querySelector('#grand-node div div div div');
+}
+
+function increaseRankBy(n) {
+ var rankedLists = document.querySelectorAll('.ranked-list');
+ 
+ for (let i = 0; i < rankedLists.length; i++) {
+   rankedLists[i].innerHTML = (n + i).toString();
+ }
+ return rankedLists;
 }
